@@ -3,6 +3,7 @@
 }
 
 @model ToDoList.Models.Item
+@using System
 
 <h2>Item Details</h2>
 <hr />
@@ -16,6 +17,14 @@
   else
   {
     <span> No</span>
+  }
+</h4>
+
+<h4>
+  Due Date: <span>@Model.DateDue</span>
+  @if (@Model.DateDue < DateTime.Now)
+  {
+    <span class="sad"> PAST DUE ☹</span>
   }
 </h4>
 

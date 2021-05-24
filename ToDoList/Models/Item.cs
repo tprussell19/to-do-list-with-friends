@@ -16,7 +16,7 @@ namespace ToDoList.Models
 
     [Display(Name = "Task Completed")]
     public bool IsCompleted { get; set; } = false;
-    public DateTime DateDue { get; set; }
+    public DateTime DateDue { get; set; } = DateTime.Now;
 
     public virtual ICollection<CategoryItem> JoinEntities { get; }
   }
